@@ -1,8 +1,21 @@
 package main
 
-import (
-	"fmt"
+import "fmt"
+
+impo
+"fmt"
 )
+
+func main() {
+	a := []int{5, 1, 2, 5}
+	b := []int{4, 2, 5, 1, 1, 2}
+	uniqueA := uniqueSlice(a)
+	uniqueB := uniqueSlice(b)
+	intersectionAB := intersection(a, b)
+	fmt.Println("Unique elements in slice a:", uniqueA)
+	fmt.Println("Unique elements in slice b:", uniqueB)
+	fmt.Println("Intersection of a and b:", intersectionAB)
+}
 func uniqueSlice(input []int) []int {
 	uniqueMap := make(map[int]struct{})
 	for _, value := range input {
@@ -27,14 +40,3 @@ func intersection(sliceA, sliceB []int) []int {
 	}
 	return uniqueSlice(intersectionList)
 }
-func main() {
-	a := []int {5, 1, 2, 5}
-	b := []int {4, 2, 5, 1, 1, 2}
-	uniqueA := uniqueSlice(a)
-	uniqueB := uniqueSlice(b)
-	intersectionAB := intersection(a,b)
-	fmt.Println("Unique elements in slice a:", uniqueA)
-	fmt.Println("Unique elements in slice b:", uniqueB)
-	fmt.Println("Intersection of a and b:", intersectionAB)
-}
-
